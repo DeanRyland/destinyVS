@@ -1,0 +1,70 @@
+/**************************************
+	CHARACTER RESULTS STYLES
+**************************************/
+
+.character-stats {
+	display: none;
+
+	.stat-cat {
+		padding: 0;
+
+		.lg-stat {
+			height: 90px;
+		}
+
+		.stat-wrapper {
+			margin: 2px;
+			padding: 5px;
+			text-align: center;
+			background: rgba(20, 20, 20, 0.5);
+			color: #FFF;
+
+			&:hover {
+				background: rgba(20, 20, 20, 0.7);
+				cursor: pointer;
+			}
+
+			&:focus, &:active {
+				background: rgba(20, 20, 20, 0.9);
+				cursor: pointer;
+			}
+
+			.stat-md-text {
+				font-size: 1.5em;
+			}
+
+			.stat-sm-text {
+				margin: 0 auto;
+			}
+
+			.stat-label {
+
+			}
+
+			.lg-text-stat {
+				font-size: 3em;
+			}
+		}
+
+		.stat-sm {
+			height: 70px;
+		}
+
+		// Custom CSS Margin Fixes
+		.margin-top-remover {
+			margin-top: 0;
+		}
+
+		.margin-top {
+			margin-top: 1px;
+		}
+
+		.margin-left-remover {
+			margin-left: 0;
+		}
+
+		.margin-right-remover {
+			margin-right: 0;
+		}
+	}
+}

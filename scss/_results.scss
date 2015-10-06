@@ -1,0 +1,50 @@
+/**************************************
+	CHARACTER RESULTS STYLES
+**************************************/
+
+// List of account profiles
+.profile-characters {
+	display: none;
+
+	// Each profile in the listing
+	.character {
+		background: rgba(122, 122, 122, 0.5);
+		padding: 10px;
+		margin-bottom: 4px;
+
+		&:hover {
+			background: rgba(20, 20, 20, 0.7);
+			cursor: pointer;
+		}
+
+		&:focus, &:active {
+			background: rgba(20, 20, 20, 0.9);
+			cursor: pointer;
+		}
+
+		// Character Emblem 
+		img {
+			float: left;
+		}
+
+		//Character CLass
+		span.char-class {
+			font-size: 2em;
+			font-family: $roboto;
+			float: left;
+			padding-left: 10px;
+			text-transform: uppercase;
+			color: #FFF;
+		}
+
+		span.char-light-level {
+			float: right;
+			font-size: 2em;
+			color: #f5dc56;
+
+			.light-icon {
+				padding-top: 5px;
+			}
+		}
+	}
+}
