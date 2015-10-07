@@ -1,0 +1,145 @@
+/************************************************
+	FORM STYLES
+************************************************/
+
+//Form Container
+.form-container {
+	//padding: 380px 0 0 0;
+	margin: 0 auto;
+	max-width: 1200px;
+	position: relative;
+  	top: 40%;
+  	transform: translateY(-50%);
+
+  	-webkit-transition: top 1s;
+    transition: top 1s;
+
+	//Individual Form Container
+	.col-md-3 {
+		margin: 0 auto;
+	}
+
+	//Select List Container
+	.selector-container {
+
+		//General Select List
+		.form-control {
+			border: none;
+			font-family: $roboto;
+			font-size: 1.5em;
+			height: 40px;
+
+			&:focus {
+				border: none;
+				box-shadow: none;
+			}
+		}
+	}
+
+	//Input Containers
+	.corner-container {
+
+		//General Corner Input
+		.form-control {
+			height: 74px;
+			font-family: $roboto;
+			font-size: 3em;
+			border: none;
+		}
+	}
+
+	//Left Form Container
+	.left-container {
+
+		//Left Corner Contaienr
+		.left-corner {
+
+			//Left Corner Label
+			label {
+				float: right;
+			}
+
+			//Left Corner Input
+			.form-control {
+				text-align: right;
+
+				&:focus {
+					border: 1px solid #ED0100;
+					box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(237,1,0,.6);
+					-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(237,1,0,.6);
+				}
+			}
+		}
+	}
+
+	//Right Form Container
+	.right-container {
+
+		//Right Corner Container
+		.right-corner {
+
+			//Right Corner Label
+			label {
+				float: left;
+			}
+
+			.form-control {
+
+				&:focus {
+					border: 1px solid #0C4EC4;
+					box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(12,78,196,.6);
+					-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(12,78,196,.6);
+				}
+			}
+		}
+	}
+
+	//Form Submit Container
+	.vs-container {
+		text-align: center;
+		
+		//Submit Button
+		.vs-btn {
+			font-family: $roboto;
+			font-size: 3em;
+			width: 100%;
+			height: 80px;
+			border: none;
+			background: rgba(255,255,255,0);
+			//background: url("../images/vs.png") no-repeat center;
+			padding: 0 20% 0 20%;
+
+			& > .submit-img {
+				-webkit-transition: transform 0.5s ease;
+				transition: transform 0.5s ease;
+				-ms-transform: scale(1); /* IE 9 */
+   				webkit-transform: scale(1); /* Safari */
+    			transform: scale(1);
+			}
+
+			& > .loader {
+				animation: loaderSpin 1s linear infinite;
+			}
+
+			&:hover > .submit-img {
+				-ms-transform: scale(0.9); /* IE 9 */
+   				webkit-transform: scale(0.9); /* Safari */
+    			transform: scale(0.9);
+			}
+
+			&:active {
+				
+			}
+
+			&:active > img {
+				
+			}
+
+			&:active, &:focus {
+				-webkit-box-shadow: none;
+    			box-shadow: none;
+    			outline: none;
+			}
+		}
+	}
+}
