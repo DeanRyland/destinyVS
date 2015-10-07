@@ -24,7 +24,7 @@ Player.prototype.init = function () {
 
 	console.log(SearchPlayer);
 
-	var dataArray = array('X-API-KEY'=>apiKey);
+	var dataArray = {'X-API-KEY':apiKey};
 
 	//console.log( $(this).serialize() );
 	
