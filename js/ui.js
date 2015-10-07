@@ -1,4 +1,14 @@
 $(document).ready(function () {
+
+	//Ajax Loading
+	var $loading = $('#vs-submit .loader').hide();
+	$(document)
+	  .ajaxStart(function () {
+	    $loading.show();
+	  })
+	  .ajaxStop(function () {
+	    $loading.hide();
+	  });
 	
 	// Clicking on the vs-submit button will show each profiles characters
 	$('#vs-submit').on("click", function(event) {
@@ -6,6 +16,10 @@ $(document).ready(function () {
 		$('.form-container').css("top", "20%");
 		
 		$('.profile-characters').show();
+
+		$('#vs-submit .submit-img').hide();
+
+		$('#vs-submit .loader').show();
 
 	});
 
