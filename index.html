@@ -24,11 +24,18 @@
 
       <div class="form-container">
         
-        <div class="col-md-4 left-container">
+        <div class="col-md-5 left-container">
           
-          <form form>
+          <form>
             <div class="form-group left-corner corner-container">
-              <input type="text" class="form-control" id="playerA" name="playerA" tabindex="1" placeholder="Player A">
+              <input type="text" class="form-control" id="playerA" name="playerA" tabindex="1" placeholder="Player A" value="Player A">
+            </div>
+            <div class="form-group selector-container">
+              <select id="playerA-selector" class="form-control">
+                <option value="">--Choose your Platform--</option>
+                <option value="2">PlayStation Network</option>
+                <option value="1">Xbox Live</option>
+              </select>
             </div>
           </form>
           
@@ -83,9 +90,9 @@
               </div>
               <div class="stat-cat col-md-6">
                 <div class="stat-wrapper lg-stat margin-top margin-right-remover">
-                  <span class="stat-label">Recent Games</span>
-                  <div class="stat-md-text">Strike</div>
-                  <div class="stat-sm-text">Meridian Bay, Mars</div>
+                  <span class="stat-label">Time Played</span>
+                  <div class="stat-md-text">All Time</div>
+                  <div class="stat-sm-text">3d 2h 19m</div>
                 </div>
               </div>
 
@@ -97,8 +104,8 @@
               </div>
               <div class="stat-cat stat-cat-sm col-md-3">
                 <div class="stat-wrapper stat-sm margin-top">
-                  <span class="stat-label">Top Wea.</span>
-                  <div class="stat-sm-text">Hand Cannon</div>
+                  <span class="stat-label">Games Played</span>
+                  <div class="stat-sm-text">218</div>
                 </div>
               </div>
               <div class="stat-cat col-md-3">
@@ -138,20 +145,37 @@
                 </div>
               </div>
 
+              <div class="stat-cat col-md-12">
+                <div class="stat-wrapper return-tab margin-right-remover">
+                  <div class="stat-md-text">
+                    <img src="images/back.png">
+                    <span class="return-text">Return</span>
+                  </div>
+                </div>
+              </div>
+
             </div>
 
           </div>
+        
         </div>
 
-        <div class="col-md-3 vs-container">
-          <button type="submit" id="vs-submit" class="btn btn-default vs-btn" tabindex="3"><img src="images/vs.png"></button>
+        <div class="col-md-2 vs-container">
+          <button id="vs-submit" class="btn btn-default vs-btn" tabindex="3"><img src="images/vs.png"></button>
         </div>
 
-        <div class="col-md-4 right-container">
+        <div class="col-md-5 right-container">
           
           <form>
             <div class="form-group right-corner corner-container">
-              <input type="text" class="form-control" id="playerB" name="playerB" tabindex="2" placeholder="Player B">
+              <input type="text" class="form-control" id="playerB" name="playerB" tabindex="2" placeholder="Player B" value="Player B">
+            </div>
+            <div class="form-group selector-container">
+              <select id="playerB-selector" class="form-control">
+                <option value="">--Choose your Platform--</option>
+                <option value="2">PlayStation Network</option>
+                <option value="1">Xbox Live</option>
+              </select>
             </div>
           </form>
 
@@ -165,7 +189,115 @@
             <div class="character col-md-12" id="profile-b-3">
               <img src="images/test.png"><span class="char-class">Warlock</span><span class="char-light-level"><img class="light-icon" src="images/light.png">275</span>
             </div>
+
+            <div class="character-stats profileB-stats col-mad-12">
+              <div class="stat-cat col-md-4">
+                <div class="stat-wrapper margin-top-remover margin-left-remover">
+                  Story
+                </div>
+              </div>
+              <div class="stat-cat col-md-4">
+                <div class="stat-wrapper margin-top-remover">
+                  Strike
+                </div>
+              </div>
+              <div class="stat-cat col-md-4">
+                <div class="stat-wrapper margin-top-remover margin-right-remover">
+                  Patrol
+                </div>
+              </div>
+              <div class="stat-cat col-md-4">
+                <div class="stat-wrapper margin-top-remover margin-left-remover">
+                  Raid
+                </div>
+              </div>
+              <div class="stat-cat col-md-4">
+                <div class="stat-wrapper margin-top-remover">
+                  POE
+                </div>
+              </div>
+              <div class="stat-cat col-md-4">
+                <div class="stat-wrapper margin-top-remover margin-right-remover">
+                  Crucible
+                </div>
+              </div>
+
+              <div class="stat-cat col-md-6">
+                <div class="stat-wrapper lg-stat margin-top margin-left-remover">
+                  <span class="stat-label">Kill/Death</span>
+                  <div class="lg-text-stat">42.78</div>
+                </div>
+              </div>
+              <div class="stat-cat col-md-6">
+                <div class="stat-wrapper lg-stat margin-top margin-right-remover">
+                  <span class="stat-label">Time Played</span>
+                  <div class="stat-md-text">All Time</div>
+                  <div class="stat-sm-text">2d 0h 8m</div>
+                </div>
+              </div>
+
+              <div class="stat-cat col-md-3">
+                <div class="stat-wrapper stat-sm margin-top margin-left-remover">
+                  <span class="stat-label">Kills</span>
+                  <div class="stat-md-text">5682</div>
+                </div>
+              </div>
+              <div class="stat-cat stat-cat-sm col-md-3">
+                <div class="stat-wrapper stat-sm margin-top">
+                  <span class="stat-label">Games Played</span>
+                  <div class="stat-sm-text">151</div>
+                </div>
+              </div>
+              <div class="stat-cat col-md-3">
+                <div class="stat-wrapper stat-sm margin-top">
+                  <span class="stat-label">Acti. Clr</span>
+                  <div class="stat-md-text">84</div>
+                </div>
+              </div>
+              <div class="stat-cat col-md-3">
+                <div class="stat-wrapper stat-sm margin-top margin-right-remover">
+                  <span class="stat-label">Orbs Gen</span>
+                  <div class="stat-md-text">123</div>
+                </div>
+              </div>
+              <div class="stat-cat col-md-3">
+                <div class="stat-wrapper stat-sm margin-left-remover">
+                  <span class="stat-label">Headshots</span>
+                  <div class="stat-md-text">645</div>
+                </div>
+              </div>
+              <div class="stat-cat col-md-3">
+                <div class="stat-wrapper stat-sm">
+                  <span class="stat-label">Abil. Kills</span>
+                  <div class="stat-md-text">567</div>
+                </div>
+              </div>
+              <div class="stat-cat col-md-3">
+                <div class="stat-wrapper stat-sm">
+                  <span class="stat-label">Deaths</span>
+                  <div class="stat-md-text">346</div>
+                </div>
+              </div>
+              <div class="stat-cat col-md-3">
+                <div class="stat-wrapper stat-sm margin-right-remover">
+                  <span class="stat-label">Revives</span>
+                  <div class="stat-md-text">29</div>
+                </div>
+              </div>
+
+              <div class="stat-cat col-md-12">
+                <div class="stat-wrapper return-tab margin-right-remover">
+                  <div class="stat-md-text">
+                    <img src="images/back.png">
+                    <span class="return-text">Return</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
           </div>
+
         </div>
       </div>
 
@@ -176,5 +308,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/ajax-calls.js"></script>
+    <script src="js/functions.js"></script>
 </html>

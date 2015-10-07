@@ -4,13 +4,36 @@
 
 //Form Container
 .form-container {
-	padding: 380px 0 0 60px;
+	//padding: 380px 0 0 0;
 	margin: 0 auto;
 	max-width: 1200px;
+	position: relative;
+  	top: 40%;
+  	transform: translateY(-50%);
+
+  	-webkit-transition: top 1s;
+    transition: top 1s;
 
 	//Individual Form Container
 	.col-md-3 {
 		margin: 0 auto;
+	}
+
+	//Select List Container
+	.selector-container {
+
+		//General Select List
+		.form-control {
+			border: none;
+			font-family: $roboto;
+			font-size: 1.5em;
+			height: 40px;
+
+			&:focus {
+				border: none;
+				box-shadow: none;
+			}
+		}
 	}
 
 	//Input Containers
@@ -27,7 +50,6 @@
 
 	//Left Form Container
 	.left-container {
-		margin-left: 18px;
 
 		//Left Corner Contaienr
 		.left-corner {
@@ -80,7 +102,7 @@
 		.vs-btn {
 			font-family: $roboto;
 			font-size: 3em;
-			width: 50%;
+			width: 100%;
 			border: none;
 			background: none;
 

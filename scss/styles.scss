@@ -1,8 +1,12 @@
 @import 'variables';
+@import 'mixins';
 @import 'form';
 @import 'results';
 @import 'stats';
 
 body {
 	background: url("../images/pixel_weave.png");
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
 }

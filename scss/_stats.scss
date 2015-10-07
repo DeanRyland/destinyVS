@@ -44,6 +44,28 @@
 			.lg-text-stat {
 				font-size: 3em;
 			}
+
+			.winner-green {
+				background: rgba(69,191,85, 0.7);
+			}
+		}
+
+		.return-tab {
+			background: rgba(255,29,35, 0.5);
+
+			&:hover {
+				background: rgba(255,29,35, 0.7);
+				cursor: pointer;
+			}
+
+			&:focus, &:active {
+				background: rgba(255,29,35, 0.9);
+				cursor: pointer;
+			}
+
+			.return-text {
+				vertical-align: top;
+			}
 		}
 
 		.stat-sm {
