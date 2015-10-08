@@ -2,26 +2,20 @@ $(document).ready(function () {
 
 	//Ajax Loading
 	var $loading = $('#vs-submit .loader').hide();
+	var $loadingError = $('.load-error').hide();
 	$(document)
 	  .ajaxStart(function () {
 	    $loading.show();
 	  })
 	  .ajaxStop(function () {
 	    $loading.hide();
+	  })
+	  .ajaxError(function () {
+	  	$loadingError.show();
 	  });
 	
 	// Clicking on the vs-submit button will show each profiles characters
-	$('#vs-submit').on("click", function(event) {
-
-		$('.form-container').css("top", "70%");
-		
-		$('.profile-characters').show();
-
-		$('#vs-submit .submit-img').hide();
-
-		$('#vs-submit .loader').show();
-
-	});
+	//$('#vs-submit').on("click", );
 
 	// Clicking on each character will show their stats
 	$('.profileA .character').click(function(event) {
@@ -61,6 +55,19 @@ $(document).ready(function () {
 	});
 })
 
+function vsSubmitAnimation() {
+
+	$('.form-container').css("top", "70%");
+	
+	$('.profile-characters').show();
+
+	$('#vs-submit .submit-img').hide();
+
+	$('#vs-submit .loader').show();
+
+}
+
+// Particleground JS
 document.addEventListener('DOMContentLoaded', function () {
   particleground(document.getElementById('particles'), {
     dotColor: '#D3D4D6',
