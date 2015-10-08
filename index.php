@@ -1,6 +1,4 @@
-<?php
-  include_once('constant.php');
-?>
+
 <!DOCTYPE HTML5>
 <html lang="en">
   <head>
@@ -28,7 +26,7 @@
           
           <form>
             <div class="form-group left-corner corner-container">
-              <input type="text" class="form-control" id="playerA" name="playerA" tabindex="1" placeholder="Player A" value="Player A">
+              <input type="text" class="form-control" id="playerA" name="playerA" tabindex="1" placeholder="Player A" value="SNIPEOUTdaLIGHTS">
             </div>
             <div class="form-group selector-container">
               <select id="playerA-selector" class="form-control">
@@ -41,13 +39,13 @@
           
           <div class="profile-characters profileA">
             <div class="character col-md-12" id="profile-a-1">
-              <img src="images/test.png"><span class="char-class">Hunter</span><span class="char-light-level"><img class="light-icon" src="images/light.png">285</span>
+              <img src="images/test.png"><span class="char-class"></span><span class="char-light-level"><img class="light-icon" src="images/light.png"></span>
             </div>
             <div class="character col-md-12" id="profile-a-2">
-              <img src="images/test.png"><span class="char-class">Titan</span><span class="char-light-level"><img class="light-icon" src="images/light.png">213</span>
+              <img src="images/test.png"><span class="char-class"></span><span class="char-light-level"><img class="light-icon" src="images/light.png"></span>
             </div>
             <div class="character col-md-12" id="profile-a-3">
-              <img src="images/test.png"><span class="char-class">Warlock</span><span class="char-light-level"><img class="light-icon" src="images/light.png">256</span>
+              <img src="images/test.png"><span class="char-class"></span><span class="char-light-level"><img class="light-icon" src="images/light.png"><span class="char-light-level-text"></span></span>
             </div>
 
             <div class="character-stats profileA-stats col-mad-12">
@@ -161,14 +159,14 @@
         </div>
 
         <div class="col-md-2 vs-container">
-          <button id="vs-submit" class="btn btn-default vs-btn" tabindex="3"><img class="submit-img" src="images/vs.png"><img class="loader" src="images/loader.png"></button>
+          <button id="vs-submit" class="btn btn-default vs-btn" tabindex="3"><img class="submit-img" src="images/vs.png"><img class="loader" src="images/loader.png"><img class="load-error" src="images/error-submit.png"></button>
         </div>
 
         <div class="col-md-5 right-container">
           
           <form>
             <div class="form-group right-corner corner-container">
-              <input type="text" class="form-control" id="playerB" name="playerB" tabindex="2" placeholder="Player B" value="Player B">
+              <input type="text" class="form-control" id="playerB" name="playerB" tabindex="2" placeholder="Player B" value="xWellax">
             </div>
             <div class="form-group selector-container">
               <select id="playerB-selector" class="form-control">

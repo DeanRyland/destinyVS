@@ -90,6 +90,7 @@
         animation: loaderSpin 1s linear infinite; }
       /* line 123, ../scss/_form.scss */
       .form-container .vs-container .vs-btn:hover > .submit-img {
+        -webkit-backface-visibility: hidden;
         -ms-transform: scale(0.9);
         /* IE 9 */
         webkit-transform: scale(0.9);
