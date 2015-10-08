@@ -47,4 +47,16 @@
 			}
 		}
 	}
+
+	.help-text {
+		font-size: 1.5em;
+		color: #FFF;
+		text-align: center;
+		background:rgba(42,51,62, 0.9);
+
+		.stat-lg-text {
+			vertical-align: middle;
+			padding-left: 10px;
+		}
+	}
 }

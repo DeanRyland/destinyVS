@@ -29,7 +29,7 @@
               <input type="text" class="form-control" id="playerA" name="playerA" tabindex="1" placeholder="Player A" value="SNIPEOUTdaLIGHTS">
             </div>
             <div class="form-group selector-container">
-              <select id="playerA-selector" class="form-control">
+              <select name="playerAPlatform" id="playerA-selector" class="form-control">
                 <option value="">--Choose your Platform--</option>
                 <option value="2">PlayStation Network</option>
                 <option value="1">Xbox Live</option>
@@ -38,17 +38,30 @@
           </form>
           
           <div class="profile-characters profileA">
-            <div class="character col-md-12" id="profile-a-1">
-              <img src="images/test.png"><span class="char-class"></span><span class="char-light-level"><img class="light-icon" src="images/light.png"></span>
+            <!--<div class="character col-md-12" id="profile-a-1">
+              <img src="images/test.png"><span class="char-class">Hunter</span><span class="char-light-level"><img class="light-icon" src="images/light.png"><span class="char-light-level-text">286</span></span>
             </div>
             <div class="character col-md-12" id="profile-a-2">
-              <img src="images/test.png"><span class="char-class"></span><span class="char-light-level"><img class="light-icon" src="images/light.png"></span>
+              <img src="images/test.png"><span class="char-class">Titan</span><span class="char-light-level"><img class="light-icon" src="images/light.png"><span class="char-light-level-text">234</span></span>
             </div>
             <div class="character col-md-12" id="profile-a-3">
-              <img src="images/test.png"><span class="char-class"></span><span class="char-light-level"><img class="light-icon" src="images/light.png"><span class="char-light-level-text"></span></span>
+              <img src="images/test.png"><span class="char-class">Warlock</span><span class="char-light-level"><img class="light-icon" src="images/light.png"><span class="char-light-level-text">298</span></span>
+            </div>-->
+
+            <div id="charWrapper">
+            
+            </div>
+
+            <div class="help-text col-md-12">
+              <img src="images/info.png"><span class="stat-lg-text">Please select a character to compare</span>
             </div>
 
             <div class="character-stats profileA-stats col-mad-12">
+              <div class="stat-cat col-md-12">
+                <div class="stat-wrapper margin-top-remover margin-left-remover margin-right-remover">
+                  Overall
+                </div>
+              </div>
               <div class="stat-cat col-md-4">
                 <div class="stat-wrapper margin-top-remover margin-left-remover">
                   Story
@@ -83,7 +96,7 @@
               <div class="stat-cat col-md-6">
                 <div class="stat-wrapper lg-stat margin-top margin-left-remover">
                   <span class="stat-label">Kill/Death</span>
-                  <div class="lg-text-stat">37.95</div>
+                  <div class="stat-lg-text">37.95</div>
                 </div>
               </div>
               <div class="stat-cat col-md-6">
@@ -103,7 +116,7 @@
               <div class="stat-cat stat-cat-sm col-md-3">
                 <div class="stat-wrapper stat-sm margin-top">
                   <span class="stat-label">Games Played</span>
-                  <div class="stat-sm-text">218</div>
+                  <div class="stat-md-text">218</div>
                 </div>
               </div>
               <div class="stat-cat col-md-3">
@@ -159,17 +172,17 @@
         </div>
 
         <div class="col-md-2 vs-container">
-          <button id="vs-submit" class="btn btn-default vs-btn" tabindex="3"><img class="submit-img" src="images/vs.png"><img class="loader" src="images/loader.png"><img class="load-error" src="images/error-submit.png"></button>
+          <button id="vs-submit" class="btn btn-default vs-btn" tabindex="3"><img class="submit-img" src="images/vs.png"><img class="loader" src="images/loader.png"><img class="load-error" src="images/error-submit.png"><img class="load-success" src="images/success.png"></button>
         </div>
 
         <div class="col-md-5 right-container">
           
           <form>
             <div class="form-group right-corner corner-container">
-              <input type="text" class="form-control" id="playerB" name="playerB" tabindex="2" placeholder="Player B" value="xWellax">
+              <input type="text" class="form-control" id="playerB" name="playerB" tabindex="2" placeholder="Player B" value="xWallax">
             </div>
             <div class="form-group selector-container">
-              <select id="playerB-selector" class="form-control">
+              <select name="playerBPlatform" id="playerB-selector" class="form-control">
                 <option value="">--Choose your Platform--</option>
                 <option value="2">PlayStation Network</option>
                 <option value="1">Xbox Live</option>
@@ -188,7 +201,16 @@
               <img src="images/test.png"><span class="char-class">Warlock</span><span class="char-light-level"><img class="light-icon" src="images/light.png">275</span>
             </div>
 
+            <div class="help-text col-md-12">
+              <img src="images/info.png"><span class="stat-lg-text">Please select a character to compare</span>
+            </div>
+
             <div class="character-stats profileB-stats col-mad-12">
+              <div class="stat-cat col-md-12">
+                <div class="stat-wrapper margin-top-remover margin-left-remover margin-right-remover">
+                  Overall
+                </div>
+              </div>
               <div class="stat-cat col-md-4">
                 <div class="stat-wrapper margin-top-remover margin-left-remover">
                   Story
@@ -223,7 +245,7 @@
               <div class="stat-cat col-md-6">
                 <div class="stat-wrapper lg-stat margin-top margin-left-remover">
                   <span class="stat-label">Kill/Death</span>
-                  <div class="lg-text-stat">42.78</div>
+                  <div class="stat-lg-text">42.78</div>
                 </div>
               </div>
               <div class="stat-cat col-md-6">
@@ -243,7 +265,7 @@
               <div class="stat-cat stat-cat-sm col-md-3">
                 <div class="stat-wrapper stat-sm margin-top">
                   <span class="stat-label">Games Played</span>
-                  <div class="stat-sm-text">151</div>
+                  <div class="stat-md-text">151</div>
                 </div>
               </div>
               <div class="stat-cat col-md-3">

@@ -140,6 +140,16 @@
       /* line 45, ../scss/_results.scss */
       .profile-characters .character span.char-light-level .light-icon {
         padding-top: 5px; }
+  /* line 51, ../scss/_results.scss */
+  .profile-characters .help-text {
+    font-size: 1.5em;
+    color: #FFF;
+    text-align: center;
+    background: rgba(42, 51, 62, 0.9); }
+    /* line 57, ../scss/_results.scss */
+    .profile-characters .help-text .stat-lg-text {
+      vertical-align: middle;
+      padding-left: 10px; }
 
 /**************************************
 	CHARACTER RESULTS STYLES
@@ -169,14 +179,14 @@
         background: rgba(20, 20, 20, 0.9);
         cursor: pointer; }
       /* line 32, ../scss/_stats.scss */
+      .character-stats .stat-cat .stat-wrapper .stat-lg-text {
+        font-size: 3em; }
+      /* line 36, ../scss/_stats.scss */
       .character-stats .stat-cat .stat-wrapper .stat-md-text {
         font-size: 1.5em; }
-      /* line 36, ../scss/_stats.scss */
+      /* line 40, ../scss/_stats.scss */
       .character-stats .stat-cat .stat-wrapper .stat-sm-text {
         margin: 0 auto; }
-      /* line 44, ../scss/_stats.scss */
-      .character-stats .stat-cat .stat-wrapper .lg-text-stat {
-        font-size: 3em; }
       /* line 48, ../scss/_stats.scss */
       .character-stats .stat-cat .stat-wrapper .winner-green {
         background: rgba(69, 191, 85, 0.7); }

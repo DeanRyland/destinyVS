@@ -1,7 +1,4 @@
 
-var apiKey = '1a727ce6000d470db117db15a7331f20';
-var preURL = 'http://www.bungie.net/Platform/Destiny/';
-
 $(document).ready(function () {
 
 	$('#vs-submit').on("click", GetPlayersInfo);
@@ -18,39 +15,25 @@ Player.prototype.init = function () {
 	//console.log('Gametag: ' + this.gametag);
 	//console.log('doSomthingCool: ' + passedInValue);
 
-	var SearchPlayer = preURL + "SearchDestinyPlayer/" + this.platform + "/" + this.gametag;
+	//var SearchPlayer = "SearchDestinyPlayer/" + this.platform + "/" + this.gametag;
 
-	console.log(SearchPlayer);
+	var gametag = this.gametag;
+	var platform = this.platform;
 
-	//var dataArray = {'X-API-KEY':apiKey};
+	//console.log(SearchPlayer);
 
-	//console.log( $(this).serialize() );
-
-	$.ajaxSetup({
-    	beforeSend: function(xhr) {
-        	xhr.setRequestHeader('X-API-KEY', '1a727ce6000d470db117db15a7331f20');
-    	}
-	});
-	
 	$.ajax({
-	 	method: "GET",
-	  	url: SearchPlayer,
-	  	crossDomain: true,
-	  	dataType: 'json'
+		method: "POST",
+		url: "bungieRequest.php",
+		dataType: "json",
+		data: {
+			'gametag': gametag,
+			'platform': platform
+		}
 	})
 	.done(function( data ) {
-		console.log(data);
-	  	//alert( "Data Saved: " + msg );
-	  	//parseData = $.parseJSON(msg);
-	  	////console.log(data);
-	  	
-	  	//TURN BACK ON!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-	  	//updateLogin(data);
-	});
-
-	/*function setHeader(xhr) {
-  		xhr.setRequestHeader('X-API-KEY', apiKey);
-	}*/
+		populateCharacterTabs(data);
+	})
 }
 
 var playerA;
@@ -68,28 +51,21 @@ function GetPlayersInfo(event) {
 	//validate that the inputs are good
 	//check that a name is entered, has proper values
 	//check that a platform is selected
-	if(
-	$("#playerA-selector").val() === "")
-	{
+	if($("#playerA-selector").val() === "") {
 		$('#playerA-selector').css("color", "#D40D12");
 		$('#playerA-selector option').css("color", "#555");
 		return;
 	}
-	else if(
-	$("#playerA-selector").val() > 0)
-	{
+	else if($("#playerA-selector").val() > 0) {
 		$('#playerA-selector').css("color", "#555");
 	}
-	if(
-	$("#playerB-selector").val() === "")
-	{
+	
+	if($("#playerB-selector").val() === "") {
 		$('#playerB-selector').css("color", "#D40D12");
 		$('#playerB-selector option').css("color", "#555");
 		return;
 	}
-	else if(
-	$("#playerB-selector").val() > 0)
-	{
+	else if($("#playerB-selector").val() > 0) {
 		$('#playerB-selector').css("color", "#555");
 	}
 
@@ -97,7 +73,45 @@ function GetPlayersInfo(event) {
 	playerB = new Player(playerBgametag, playerBplatform);
 
 	playerA.init();
-	//playerB.init();
+	playerB.init();
 
 	vsSubmitAnimation();
+}
+
+
+function logArrayElements(characterArr, partialHtml) {
+	
+	console.log('logArrayElements');
+	
+	//populate the html partial
+	var characterHtml = partialHtml;
+
+	characterHtml = characterHtml
+		.replace('{{emblem}}', characterArr['charEmblem'])
+		.replace('{{class}}', characterArr['charClass'])
+		.replace('{{charBg}}', characterArr['charBg'])
+		.replace('{{lightLevel}}', characterArr['charLightLevel']);
+	$("#charWrapper").append(characterHtml);
+		//append it to the chracter wrapper
+
+}
+
+
+function populateCharacterTabs(data) {
+
+	//Load our character-tab.html partial
+	$.ajax({
+		url: "partials/character-tab.html",
+	})
+	.done(
+		function( partialHtml ) {
+			//for each character
+			for(var x in data['characters']){
+				//console.log(data['characters'][x]);
+				//console.log('testies...');
+				logArrayElements(data['characters'][x], partialHtml);
+			}
+	  		//$(data['characters']).forEach();	
+		}
+	)
 }
